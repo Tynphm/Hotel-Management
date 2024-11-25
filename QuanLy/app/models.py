@@ -70,27 +70,27 @@ if __name__ == '__main__':
 
         products = [{
             "name": "Phòng Vip 1",
-            "price": 17000000,
+            "price": 2000000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/NWSGN-Club-King-Room-021-1024x704.jpg",
             "category_id": 1
         }, {
             "name": "Phòng Vip 2",
-            "price": 37000000,
+            "price": 3000000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2024/08/Deluxe-with-Balcony793-535-1.png",
             "category_id": 2
         }, {
             "name": "Phòng suite",
-            "price": 24000000,
+            "price": 900000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/NWSGN-Premier-King-Room1-1024x704.jpg",
             "category_id": 1
         }, {
             "name": "Phòng Deluxe",
-            "price": 37000000,
+            "price": 1000000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/Deluxe-Suite-Living-Room-793x535.jpg",
             "category_id": 2
         }, {
             "name": "Phòng Couple",
-            "price": 17000000,
+            "price": 3000000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/NWSGN-Director-Suite-Living-Room.jpg",
             "category_id": 1
         }, {
@@ -100,35 +100,55 @@ if __name__ == '__main__':
             "category_id": 2
         }, {
             "name": "Phòng Vip 1",
-            "price": 17000000,
+            "price": 5000000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/NWSGN-Club-King-Room-021-1024x704.jpg",
             "category_id": 1
         }, {
             "name": "Phòng Vip 2",
-            "price": 37000000,
+            "price": 3000000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2024/08/Deluxe-with-Balcony793-535-1.png",
             "category_id": 2
         }, {
             "name": "Phòng suite",
-            "price": 24000000,
+            "price": 240000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/NWSGN-Premier-King-Room1-1024x704.jpg",
             "category_id": 1
         }, {
             "name": "Phòng Deluxe",
-            "price": 37000000,
+            "price": 350000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/Deluxe-Suite-Living-Room-793x535.jpg",
             "category_id": 2
         }, {
             "name": "Phòng Couple",
-            "price": 17000000,
+            "price": 1700000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/NWSGN-Director-Suite-Living-Room.jpg",
             "category_id": 1
         }, {
             "name": " Phòng Tripple ",
-            "price": 37000000,
+            "price": 370000,
             "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2024/08/Deluxe-with-Balcony793-535-3.png",
             "category_id": 2
+        },{
+            "name": " Phòng Private ",
+            "price": 3000000,
+            "image": "https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2014/05/NWSGN-Executive-Suite1.jpg",
+            "category_id": 2
+        },{
+            "name": "Phòng Studio",
+            "price": 1000000,
+            "image": " https://saigon.newworldhotels.com/wp-content/uploads/sites/18/2024/08/Deluxe-with-Balcony793-535-2.png",
+            "category_id": 1
+        },{"name": "Phòng Villa",
+            "price": 7000000,
+            "image": " https://noithattrevietnam.com/uploaded/2020/06/cac-loai-phong-khach-san%20%2811%29.jpg",
+            "category_id": 1
+        },{"name": "Phòng Villa",
+            "price": 1700000,
+            "image": " https://noithattrevietnam.com/uploaded/2020/06/0-cac-loai-phong-khach-san%20%2813%29.jpg",
+            "category_id": 1
         }]
+
+
 
         for p in products:
             existing_product = Product.query.filter_by(name=p["name"]).first()
