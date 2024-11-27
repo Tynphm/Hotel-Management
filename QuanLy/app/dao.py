@@ -7,7 +7,7 @@ def load_categories():
     return Category.query.order_by("id").all()
 
 
-def load_products(cate_id=None, kw=None, page=1):
+def load_products(cate_id=None, kw=None, page=1,from_price=None, to_price=None):
     query = Product.query
 
     if cate_id:
@@ -15,6 +15,12 @@ def load_products(cate_id=None, kw=None, page=1):
 
     if kw:
         query = query.filter(Product.name.contains(kw))
+
+    if from_price is not None:
+        query = query.filter(Product.price >= from_price)
+
+    if to_price is not None:
+        query = query.filter(Product.price <= to_price)
 
     page_size = app.config['PAGE_SIZE']
     start = (page - 1) * page_size

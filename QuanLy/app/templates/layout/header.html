@@ -34,9 +34,18 @@
                 </li>
                 {% endif %}
 
-            </ul>
-            <form method="get" action="/" class="d-flex">
-                <input class="form-control me-2" type="text" name="kw" placeholder="Tìm sản phẩm">
+             </ul>
+            <form method="get" action="/" class="d-flex flex-wrap gap-2 align-items-center">
+                <!-- Tìm sản phẩm -->
+                <input class="form-control me-2 mb-2 mb-sm-0" type="text" name="kw" placeholder="Tìm sản phẩm" >
+
+                <!-- Tìm giá -->
+                <div class="d-flex gap-2">
+                    <input type="number" name="from_price" class="form-control" placeholder="Giá bắt đầu" >
+                    <input type="number" name="to_price" class="form-control" placeholder="Giá kết thúc" >
+                </div>
+
+                <!-- Nút tìm -->
                 <button class="btn btn-primary" type="submit">Tìm</button>
             </form>
         </div>

@@ -16,15 +16,25 @@
             <img class="card-img-top" src="{{ p.image }}" alt="{{ p.name }}">
             <div class="card-body">
                 <h4 class="card-title">{{ p.name }}</h4>
-                <p class="card-text">{{ p.price }} VNĐ</p>
+                <p class="card-text">{{"{:,.0f}".format(p.price ) }} VNĐ</p>
                 <a href="#" class="btn btn-primary">Xem chi tiết</a>
                 <button class="btn btn-danger">Đặt Phòng </button>
             </div>
         </div>
     </div>
     {% endfor %}
-</div>
+
 {% else %}
 <div class="alert alert-info mt-1">KHÔNG CÓ SẢN PHẨM NÀO!</div>
-{% endif %}
+    {% endif %}
+</div>
+{% if pages > 1 %}
+    <ul class="pagination mt-1">
+      {% for i in range(1, pages + 1) %}
+        <li class="page-item">
+          <a class="page-link" href="/?page={{ i }}&kw={{ kw }}&from_price={{ from_price }}&to_price={{ to_price }}&category_id={{ category_id }}">{{ i }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endblock %}
